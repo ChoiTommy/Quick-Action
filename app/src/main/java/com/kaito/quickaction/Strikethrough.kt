@@ -5,6 +5,7 @@ import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class Strikethrough : AppCompatActivity(){
@@ -19,6 +20,7 @@ class Strikethrough : AppCompatActivity(){
             clipboard.primaryClip = clip
         }).start()
 
+        Toast.makeText(this, "Copied to clipboard. Just paste and replace your text.", Toast.LENGTH_LONG).show()
         finish()
     }
 
